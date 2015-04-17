@@ -1,0 +1,11 @@
+#Create
+	get, post
+
+#Read
+	get
+
+#Update
+	patch, 
+
+#Destroy
+	delete, 

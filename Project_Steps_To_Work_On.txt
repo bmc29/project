@@ -1,0 +1,19 @@
+E-Commerce Project Steps To Work On:
+
+4.2.3 Write ActiveRecord queries that involve sorting (order) and finding (where).
+
+4.2.4 Generate non-scaffolded controllers and their associated routes.
+
+4.2.5 Make use of a custom flash hash message and use the session hash in some way. 
+
+4.2.7 Project uses a file upload gem like carrierwave or paperclip.
+
+2.5 Products listing are paginated. (There’s a gem for that.)
+
+4.1.1 Create valid markup and CSS for all pages on the website.
+
+4.1.2 Design a consistent look and feel for all pages on the website.
+
+4.1.3 Use HTML5 and CSS3 through the websites.
+
+4.1.4 Make use of Rails “View Partials” to optimize the ERB views used for the website.

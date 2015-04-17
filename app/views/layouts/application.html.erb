@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wild Jokers Playing Cards Emporium</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<header>
+  <h1 id="header-one">Wild Jokers Playing Cards Emporium</h1>
+</header>
+<section>
+  <nav id="header-nav">
+    <ul>
+      <li><%= link_to "Home", root_path %></li>
+      <li><%= link_to "About", about_path %></li>
+      <li><%= link_to "Contact", contact_path %></li>
+      <% Category.all.each do |category|  %>
+        <li><%= link_to category.name, "category/"+category.id.to_s %></li>
+      <% end %>
+    </ul>
+  </nav>
+</section>
+
+<%= yield %>
+<footer>
+  <section>
+  <nav id="footer-nav">
+    <ul>
+      <li><%= link_to "Home", root_path %></li>
+      <li><%= link_to "About", about_path %></li>
+      <li><%= link_to "Contact", contact_path %></li>
+      <% Category.all.each do |category|  %>
+        <li><%= link_to category.name, "category/"+category.id.to_s %></li>
+      <% end %>
+    </ul>
+  </nav>
+</section>
+</footer>
+</body>
+</html>
+

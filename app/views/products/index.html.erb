@@ -1,0 +1,5 @@
+<% @products.each do |product| %>
+  <p>Product Name: <%= link_to product.name, "/products/#{product.id}" %></p>
+  <p>Price: <%= number_to_currency(product.price) %></p>
+<% end %>
+

@@ -1,0 +1,68 @@
+Model: Product(database table: products)(camel case)
+       app/models/products.rb
+       
+	  Product's Table Columns:
+			->id(integer)
+			->name(text)
+			->description(text)
+			->price(integer)
+			->stock_quantity(integer)
+		
+       Customer(database table: customers)
+       
+       	  Customer's Table Columns:
+      	        	->id(integer)
+       			->name(text)
+       			->address(varchar)
+       			->city(text)
+			->country(text)
+			->postal_code(varchar)
+			->email(varchar)
+			->province_id(integer)
+		
+       Order(database table: orders)
+       
+       	  Order's Table Columns:
+               		->id(integer)
+       			->status(text)
+       			->pst_rate(decimal)
+       			->gst_rate(decimal)
+			->hst_rate(decimal)
+			->customer_id(integer)
+		
+       LineItem(database table: lineItems)
+       
+           LineItem's Table Columns:
+               		->id(integer)
+       			->quantity(integer)
+       			->product_id(integer)
+       			->order_id(integer)
+       			->
+			->
+	Province(database table: provinces)
+	
+	    Province's Table Columns:
+	    		->id(integer)
+	    		->name(text)
+	    		->pst(decimal)
+	    		->gst(decimal)
+	    		->hst(decimal)
+
+Database Associations:
+
+	    Customers belong to a Province.
+	    A Province has many Customers.
+	    Orders belong to a Customer.
+	    A Customer has many Orders.
+	    An Order has many Products through LineItems.
+	    A Product has many Orders through LineItems.
+	    LineItems belong to an Order.
+	    An Order has many LineItems.
+	    LineItems belong to a Product.
+   	    An Order has many Products.
+      
+Controller: app/controllers/products_controllers.rb(snake case)
+
+Views: app/views/products/*html.erb
+
+Routes: config/routes.rb
